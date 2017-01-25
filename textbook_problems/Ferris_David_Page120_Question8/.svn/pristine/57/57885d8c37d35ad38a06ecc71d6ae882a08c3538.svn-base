@@ -1,0 +1,34 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package ferris_david_page120_question8;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author davidferris
+ */
+public class Ferris_David_Page120_Question8 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        boolean isPalindrome = true;
+
+        String palindrome = input.nextLine();
+
+        for (int x = 0; x < (int) (palindrome.length() / 2); x++) { //Runs once for every character in hald the word
+
+            if (palindrome.charAt(x) != palindrome.charAt(palindrome.length() - x - 1)) { //checks every letter with it's corresponding letter
+
+                isPalindrome = false; //If there is not a match, set the boolean to false
+            }
+        }
+        
+        System.out.println(isPalindrome); //Prints whether or not it is a palindrome
+    }
+}
